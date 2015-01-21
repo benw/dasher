@@ -536,7 +536,7 @@ GetKeyboardLayout (Ptr * resourcePtr, TextEncoding * encodingPtr)
     }
     
   } else {
-    
+#if 0
     /*
      * Use the classic approach as shown in Apple code samples, loading
      * the keyboard resources directly.  This is broken for 10.3 and
@@ -578,6 +578,7 @@ GetKeyboardLayout (Ptr * resourcePtr, TextEncoding * encodingPtr)
         KCHR = *handle;
       }
     }
+#endif
   }
   
   if (hasLayoutChanged) {
